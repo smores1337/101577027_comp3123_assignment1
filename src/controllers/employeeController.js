@@ -59,7 +59,7 @@ async function updateEmployee(req, res) {
   const employee = await Employee.findOneAndUpdate(
     { _id: eid, user: req.user.id },
     { $set: data },
-    { new: true, runValidators: true }
+    { returnDocument: 'after', runValidators: true }
   );
   if (!employee) throw await notOwnedError(eid, req.user.id, 'update');
 
