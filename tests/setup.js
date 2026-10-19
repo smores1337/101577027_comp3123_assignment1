@@ -3,7 +3,7 @@ process.env.NODE_ENV = 'test';
 process.env.JWT_SECRET = process.env.JWT_SECRET || 'test_jwt_secret';
 process.env.DB_NAME = 'comp3123_assignment1_test';
 process.env.AUTH_RATE_LIMIT_MAX = process.env.AUTH_RATE_LIMIT_MAX || '1000';
-process.env.LOG_DIR = 'logs';
+process.env.LOG_DIR = 'logs/test';
 
 const mongoose = require('mongoose');
 

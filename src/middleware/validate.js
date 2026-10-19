@@ -7,7 +7,7 @@ function validate(req, res, next) {
   const result = validationResult(req);
   if (result.isEmpty()) return next();
 
-  const errors = result.array().map((e) => ({ field: e.path, message: e.msg }));
+  const errors = result.array().map((e) => ({ field: e.path || 'body', message: e.msg }));
   logger.warn('Validation failed', { method: req.method, path: req.originalUrl, fields: errors.map((e) => e.field) });
   return next(ApiError.badRequest('Validation failed', errors));
 }
