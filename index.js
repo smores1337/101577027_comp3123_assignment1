@@ -3,7 +3,6 @@ const env = require('./src/config/env');
 const logger = require('./src/utils/logger');
 const { connectDB } = require('./src/config/db');
 
-// On Vercel the app is exported as a serverless handler; locally we start a server.
 if (!process.env.VERCEL) {
   connectDB()
     .catch(() => logger.error('Starting without a database connection'))
