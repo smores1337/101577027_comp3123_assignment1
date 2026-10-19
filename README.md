@@ -6,7 +6,7 @@
 A secure REST API built with **Node.js, Express, MongoDB (Mongoose) and JWT**. Users sign up, log in, and manage **only the employees they created**.
 
 - **GitHub:** https://github.com/smores1337/101577027_comp3123_assignment1
-- **Deployed API (Vercel):** `https://<your-project>.vercel.app` *(update after deploying – see [Deploying to Vercel](#deploying-to-vercel))*
+- **Deployed API (Vercel):** https://101577027-comp3123-assignment1.vercel.app  (health check: https://101577027-comp3123-assignment1.vercel.app/health)
 
 ---
 
@@ -243,6 +243,6 @@ Based on https://vercel.com/guides/using-express-with-vercel.
 2. Push this repo to GitHub, then on vercel.com choose **Add New → Project** and import the repo.
 3. Under **Environment Variables** add `MONGODB_URI`, `JWT_SECRET` (and optionally the others above).
 4. Deploy. `vercel.json` sends every request to `api/index.js`, which exports the Express app. The app connects to MongoDB lazily and reuses the connection between invocations.
-5. Test `https://<your-project>.vercel.app/health`, then set `baseUrl` in Postman to that URL.
+5. Test `https://101577027-comp3123-assignment1.vercel.app/health`, then set `baseUrl` in Postman to that URL.
 
 CLI alternative: `npm i -g vercel && vercel && vercel --prod`.
